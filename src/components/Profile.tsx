@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Typography, Avatar, Container } from '@mui/material';
 import { keyframes } from '@mui/system';
+import PersonIcon from '@mui/icons-material/Person';
 
 const fadeIn = keyframes`
   from {
@@ -26,7 +27,7 @@ const Profile: React.FC = () => {
         }}
       >
         <Avatar
-          src="/profile-photo.jpg" // Replace with your actual profile photo path
+          src="/profile.jpg"
           sx={{
             width: 200,
             height: 200,
@@ -38,8 +39,11 @@ const Profile: React.FC = () => {
             '&:hover': {
               transform: 'scale(1.05)',
             },
+            backgroundColor: 'primary.main',
           }}
-        />
+        >
+          <PersonIcon sx={{ fontSize: 100 }} />
+        </Avatar>
         <Typography
           variant="h3"
           component="h1"
@@ -62,7 +66,7 @@ const Profile: React.FC = () => {
             maxWidth: '600px',
           }}
         >
-          Full Stack Developer | Problem Solver | Tech Enthusiast
+          Flutter Developer | Problem Solver | Tech Enthusiast
         </Typography>
       </Box>
     </Container>

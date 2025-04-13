@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 import Header from './components/Header';
 import Profile from './components/Profile';
@@ -7,6 +6,7 @@ import CoreSkills from './components/CoreSkills';
 import Experience from './components/Experience';
 import Education from './components/Education';
 import Projects from './components/Projects';
+import LeetCodeProgress from './components/LeetCodeProgress';
 
 const theme = createTheme({
   palette: {
@@ -39,25 +39,15 @@ const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Router>
-        <div>
-          <Header />
-          <Profile />
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <CoreSkills />
-                  <Experience />
-                  <Education />
-                  <Projects />
-                </>
-              }
-            />
-          </Routes>
-        </div>
-      </Router>
+      <div>
+        <Header />
+        <Profile />
+        <CoreSkills />
+        <LeetCodeProgress />
+        <Experience />
+        <Education />
+        <Projects />
+      </div>
     </ThemeProvider>
   );
 };
