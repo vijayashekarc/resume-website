@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 import Header from './components/Header';
 import Profile from './components/Profile';
@@ -39,15 +40,17 @@ const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <div>
-        <Header />
-        <Profile />
-        <CoreSkills />
-        <LeetCodeProgress />
-        <Experience />
-        <Education />
-        <Projects />
-      </div>
+      <Router basename="/resume-website">
+        <div>
+          <Header />
+          <Profile />
+          <CoreSkills />
+          <LeetCodeProgress />
+          <Experience />
+          <Education />
+          <Projects />
+        </div>
+      </Router>
     </ThemeProvider>
   );
 };

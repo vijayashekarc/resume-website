@@ -2,7 +2,7 @@
   "name": "resume-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://vijayashekarc.github.io/resume-website",
+  "homepage": "https://vijayashekarc.github.io/resume-website/",
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
