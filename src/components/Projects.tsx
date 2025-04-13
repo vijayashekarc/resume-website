@@ -24,11 +24,11 @@ const Projects: React.FC = () => {
       demoLink: 'https://github.com/vijayashekarc/Grocery-Store-Interface-Project',
     },
     {
-      title: 'Project 2',
-      description: 'Another project description highlighting your skills and achievements.',
-      technologies: ['TypeScript', 'Express', 'PostgreSQL'],
-      githubLink: 'https://github.com/vijayashekarc/project2',
-      demoLink: 'https://project2-demo.com',
+      title: 'Expense Tracker ',
+      description: 'A basic expense tracker for your daily spendings. A web application for managing personal expenses for multiple users. Google Account users can login directly or also with custom email IDs too. User-data is being managed using Supabase integration.',
+      technologies: ['HTML5', 'CSS', 'JavaScript','Node.js',"Google Cloud Platform - 0Auth ",'Supabase - PostgreSQL'],
+      githubLink: 'https://github.com/vijayashekarc/ExpenseEase',
+      demoLink: 'https://github.com/vijayashekarc/ExpenseEase',
     },
   ];
 

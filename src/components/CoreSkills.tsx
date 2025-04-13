@@ -15,11 +15,13 @@ const fadeIn = keyframes`
 
 const CoreSkills: React.FC = () => {
   const skills = [
-    { category: 'Programming Languages', items: ['JavaScript', 'TypeScript', 'Python', 'Java'] },
-    { category: 'Frontend', items: ['React', 'HTML5', 'CSS3', 'Material-UI'] },
-    { category: 'Backend', items: ['Node.js', 'Express.js', 'REST APIs'] },
-    { category: 'Database', items: ['MongoDB', 'SQL'] },
-    { category: 'Tools & Technologies', items: ['Git', 'Docker', 'AWS'] },
+    { category: 'Programming Languages', items: ['Python - Proficient','JAVA', 'JavaScript', 'C - Language','Dart (Flutter)'] },
+    { category: 'Frontend & Backend', items: ['React', 'HTML5', 'CSS', 'Material-UI','Node.js', 'Express.js','Flask'] },
+    { category: 'Database', items: ['SQL' , 'Supabase','MongoDB'] },
+    { category: 'Tools & Technologies', items: ['Git','Linux', 'Google AI Studio', 'Google Cloud Platform','Flutter',] },
+    { category: 'AI Tools', items: ['GitHub Copilot','Gemini API','Tensor Flow','Jupyter Notebook','Cursor AI'] },
+    { category: 'Experienced IDE', items: ['Visual Studio Code','IntelliJ IDEA','Android Studio',] },
+    
   ];
 
   return (
