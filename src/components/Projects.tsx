@@ -16,6 +16,21 @@ const fadeIn = keyframes`
 
 const Projects: React.FC = () => {
   const projects = [
+    
+    {
+      title: 'Expense Tracker ',
+      description: 'A basic expense tracker for your daily spendings. A web application for managing personal expenses for multiple users. Google Account users can login directly or also with custom email IDs too. User-data is being managed using Supabase integration.',
+      technologies: ['HTML5', 'CSS', 'JavaScript','React.js','Node.js',"Google Cloud Platform - 0Auth ",'Supabase - PostgreSQL'],
+      githubLink: 'https://github.com/vijayashekarc/ExpenseEase',
+      demoLink: 'https://github.com/vijayashekarc/ExpenseEase',
+    },
+    {
+      title: 'College Student Login Portal ',
+      description: ' A College Login Portal for seamless on campus event registration.  (A Problem statement given in INNOVATE KARE - 24Hr Hackathon organized by Coding Blocks KARE & ScoreCraft) ',
+      technologies: ['HTML5', 'CSS', 'JavaScript','Node.js',"Google Cloud Platform - 0Auth ",'Supabase - PostgreSQL'],
+      githubLink: 'https://github.com/vijayashekarc/',
+      demoLink: 'https://github.com/vijayashekarc/',
+    },
     {
       title: 'Grocery-Store-Interface-Project',
       description: 'Project based on an online grocery store interface \n with features : Sign Up - Sign In - Multiple Payment Options - Delete Account - Reset Password - Generating Bill - \n Both in Text and PDF format (Using File operation) - Managing User Data and their ordered item history using \n CSV File and MySQL - Sending auto-generated bill through e-mail using SMTP library in python and Gmail API.',
@@ -23,13 +38,7 @@ const Projects: React.FC = () => {
       githubLink: 'https://github.com/vijayashekarc/Grocery-Store-Interface-Project',
       demoLink: 'https://github.com/vijayashekarc/Grocery-Store-Interface-Project',
     },
-    {
-      title: 'Expense Tracker ',
-      description: 'A basic expense tracker for your daily spendings. A web application for managing personal expenses for multiple users. Google Account users can login directly or also with custom email IDs too. User-data is being managed using Supabase integration.',
-      technologies: ['HTML5', 'CSS', 'JavaScript','Node.js',"Google Cloud Platform - 0Auth ",'Supabase - PostgreSQL'],
-      githubLink: 'https://github.com/vijayashekarc/ExpenseEase',
-      demoLink: 'https://github.com/vijayashekarc/ExpenseEase',
-    },
+    
   ];
 
   return (

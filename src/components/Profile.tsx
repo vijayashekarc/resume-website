@@ -32,12 +32,12 @@ const Profile: React.FC = () => {
           src={process.env.PUBLIC_URL + "/profile.jpg"}
           onError={() => setImgError(true)}
           sx={{
-            width: 200,
-            height: 200,
-            mb: 3,
+            width: 240,
+            height: 260,
+            mb: 4,
             border: '4px solid',
             borderColor: 'primary.main',
-            boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+            boxShadow: '0 4px 20px rgba(55, 34, 216, 0.48)',
             transition: 'transform 0.3s ease-in-out',
             '&:hover': {
               transform: 'scale(1.05)',
@@ -53,7 +53,7 @@ const Profile: React.FC = () => {
           sx={{
             fontWeight: 'bold',
             mb: 2,
-            background: 'linear-gradient(45deg, #2196F3 30%, #21CBF3 90%)',
+            background: 'linear-gradient(45deg,rgb(161, 154, 248) 10%,rgb(236, 219, 255) 90%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
           }}
