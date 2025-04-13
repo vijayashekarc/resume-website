@@ -10,7 +10,7 @@ const Header: React.FC = () => {
     <AppBar position="static" color="primary">
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Vijayashekar C
+          About me 
         </Typography>
         <Box>
           <IconButton
@@ -39,7 +39,7 @@ const Header: React.FC = () => {
           </IconButton>
           <IconButton
             color="inherit"
-            href="mailto:vijayashekar"
+            href="mailto:vijayashekar@gmail.com"
           >
             <EmailIcon />
           </IconButton>

@@ -17,11 +17,11 @@ const fadeIn = keyframes`
 const Projects: React.FC = () => {
   const projects = [
     {
-      title: 'Project 1',
-      description: 'A brief description of your project and its key features.',
-      technologies: ['React', 'Node.js', 'MongoDB'],
-      githubLink: 'https://github.com/vijayashekarc/project1',
-      demoLink: 'https://project1-demo.com',
+      title: 'Grocery-Store-Interface-Project',
+      description: 'Project based on an online grocery store interface \n with features : Sign Up - Sign In - Multiple Payment Options - Delete Account - Reset Password - Generating Bill - \n Both in Text and PDF format (Using File operation) - Managing User Data and their ordered item history using \n CSV File and MySQL - Sending auto-generated bill through e-mail using SMTP library in python and Gmail API.',
+      technologies: ['Python', 'MySQL', 'GCP'],
+      githubLink: 'https://github.com/vijayashekarc/Grocery-Store-Interface-Project',
+      demoLink: 'https://github.com/vijayashekarc/Grocery-Store-Interface-Project',
     },
     {
       title: 'Project 2',

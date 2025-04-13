@@ -5,22 +5,20 @@ import SchoolIcon from '@mui/icons-material/School';
 const Education: React.FC = () => {
   const education = [
     {
-      degree: 'Bachelor of Engineering',
-      institution: 'Your University',
-      duration: '2016 - 2020',
+      degree: 'Bachelor of Technology',
+      institution: 'Kalasalingam Academy of Research and Education',
+      duration: '2023 - 2027',
       details: [
-        'Major: Computer Science',
-        'GPA: X.X/4.0',
-        'Relevant Coursework: Data Structures, Algorithms, Web Development, Database Systems',
+        'Major: Computer Science, AIML',
+        'Relevant Coursework: Python, Data Structures & Algorithms, Machine Learning, Database Systems, IOT '
       ],
     },
     {
       degree: 'High School',
-      institution: 'Your School',
-      duration: '2014 - 2016',
+      institution: 'Kendriya Vidyalaya - Uppal No.1',
+      duration: '2021 - 2023',
       details: [
-        'Science Stream',
-        'Percentage: XX%',
+        'CBSE (Central Board of Secondary Education)',
       ],
     },
   ];

@@ -17,25 +17,16 @@ const fadeIn = keyframes`
 const Experience: React.FC = () => {
   const experiences = [
     {
-      title: 'Software Engineer',
-      company: 'Company Name',
-      duration: '2022 - Present',
+      title: 'Competitive Programming Lead',
+      company: 'Microsoft Learn Student Chapter KARE',
+      duration: 'Jul 2024 - Present',
       description: [
-        'Developed and maintained web applications using React and Node.js',
-        'Implemented RESTful APIs and integrated with various services',
-        'Collaborated with cross-functional teams to deliver high-quality software',
+        '- Contributed new problem statements for the hackathons.',
+        '- Organized hackathons and workshops effectively.',
+        '- Designed posters and flyers for multiple events.'
       ],
     },
-    {
-      title: 'Junior Developer',
-      company: 'Previous Company',
-      duration: '2020 - 2022',
-      description: [
-        'Worked on frontend development using React and Material-UI',
-        'Participated in code reviews and implemented best practices',
-        'Contributed to the development of new features and bug fixes',
-      ],
-    },
+    
   ];
 
   return (
