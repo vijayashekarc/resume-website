@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Typography, Avatar, Container } from '@mui/material';
 import { keyframes } from '@mui/system';
 import PersonIcon from '@mui/icons-material/Person';
@@ -15,6 +15,8 @@ const fadeIn = keyframes`
 `;
 
 const Profile: React.FC = () => {
+  const [imgError, setImgError] = useState(false);
+
   return (
     <Container maxWidth="md">
       <Box
@@ -27,7 +29,8 @@ const Profile: React.FC = () => {
         }}
       >
         <Avatar
-          src="/profile.jpg"
+          src={process.env.PUBLIC_URL + "/profile.jpg"}
+          onError={() => setImgError(true)}
           sx={{
             width: 200,
             height: 200,
@@ -39,10 +42,10 @@ const Profile: React.FC = () => {
             '&:hover': {
               transform: 'scale(1.05)',
             },
-            backgroundColor: 'primary.main',
+            backgroundColor: imgError ? 'primary.main' : 'transparent',
           }}
         >
-          <PersonIcon sx={{ fontSize: 100 }} />
+          {imgError && <PersonIcon sx={{ fontSize: 100 }} />}
         </Avatar>
         <Typography
           variant="h3"
