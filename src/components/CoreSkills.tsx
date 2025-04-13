@@ -74,7 +74,7 @@ const CoreSkills: React.FC = () => {
                     color: 'white',
                     px: 1,
                     py: 0.5,
-                    borderRadius: 1,
+                    borderRadius: 5,
                     transition: 'transform 0.2s ease-in-out',
                     '&:hover': {
                       transform: 'scale(1.05)',

@@ -3,7 +3,6 @@ import { AppBar, Toolbar, Typography, IconButton, Box } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
-import CodeIcon from '@mui/icons-material/Code';
 
 const Header: React.FC = () => {
   return (
@@ -29,14 +28,7 @@ const Header: React.FC = () => {
           >
             <GitHubIcon />
           </IconButton>
-          <IconButton
-            color="inherit"
-            href="https://leetcode.com/u/vijayashekarc"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <CodeIcon />
-          </IconButton>
+
           <IconButton
             color="inherit"
             href="mailto:vijayashekar@gmail.com"
