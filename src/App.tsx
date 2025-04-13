@@ -15,11 +15,43 @@ const theme = createTheme({
       main: '#1976d2',
     },
     secondary: {
-      main: '#dc004e',
+      main: '#7ed98b',
+    },
+    background: {
+      default: '#132547',
+      paper: '#29616e',
+    },
+    text: {
+      primary: '#ffffff',    // White text for main content
+      secondary: '#c6c3d6',  // Light gray for secondary text
     },
   },
   typography: {
     fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    h1: {
+      color: '#ffffff',
+    },
+    h2: {
+      color: '#ffffff',
+    },
+    h3: {
+      color: '#ffffff',
+    },
+    h4: {
+      color: '#00ff26',
+    },
+    h5: {
+      color: '#a89bf2',
+    },
+    h6: {
+      color: '#ffffff',
+    },
+    body1: {
+      color: '#ffffff',
+    },
+    body2: {
+      color: '#000000',
+    },
   },
   components: {
     MuiPaper: {
@@ -41,7 +73,10 @@ const App: React.FC = () => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router basename="/resume-website">
-        <div>
+        <div style={{ 
+          minHeight: '100vh',
+          background: 'linear-gradient(135deg,rgb(43, 28, 79) 20%,rgb(255, 255, 255) 100%)' // Gradient background
+        }}>
           <Header />
           <Profile />
           <CoreSkills />

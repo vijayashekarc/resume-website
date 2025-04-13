@@ -12,7 +12,7 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
   margin: theme.spacing(2),
   backgroundColor: theme.palette.background.paper,
   borderRadius: '12px',
-  boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+  boxShadow: '0 4px 6px rgba(255, 0, 0, 0.71)',
 }));
 
 const LeetCodeProgress: React.FC = () => {
