@@ -80,9 +80,9 @@ const App: React.FC = () => {
           <Header />
           <Profile />
           <CoreSkills />
-          <LeetCodeProgress />
-          <Experience />
           <Education />
+          <Experience />
+          <LeetCodeProgress />
           <Projects />
         </div>
       </Router>

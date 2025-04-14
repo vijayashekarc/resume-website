@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Typography, Paper, CircularProgress } from '@mui/material';
+import { Box, Typography, Paper, CircularProgress,IconButton } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import GitHubIcon from '@mui/icons-material/Code';
 
 interface LeetCodeStats {
   totalSolved: number;
   ranking: number;
+  totalQuestions: number;
 }
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
@@ -31,6 +33,7 @@ const LeetCodeProgress: React.FC = () => {
         setStats({
           totalSolved: data.totalSolved,
           ranking: data.ranking,
+          totalQuestions: data.totalQuestions,
         });
       } catch (err) {
         setError('Failed to load LeetCode stats');
@@ -62,7 +65,16 @@ const LeetCodeProgress: React.FC = () => {
   return (
     <StyledPaper elevation={3}>
       <Typography variant="h5" gutterBottom sx={{ fontWeight: 'bold', color: 'primary.main' }}>
-        LeetCode Progress
+        LeetCode Progress  
+        <IconButton
+            color="inherit"
+            href="https://leetcode.com/u/vijayashekarc/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GitHubIcon />
+          </IconButton>
+        
       </Typography>
       <Box display="flex" flexDirection="column" gap={2}>
         <Box>
@@ -70,7 +82,7 @@ const LeetCodeProgress: React.FC = () => {
             Problems Solved
           </Typography>
           <Typography variant="h4" sx={{ fontWeight: 'bold' }}>
-            {stats?.totalSolved}
+            {stats?.totalSolved } / {stats?.totalQuestions}
           </Typography>
         </Box>
         <Box>
