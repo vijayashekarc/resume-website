@@ -9,7 +9,7 @@ const Education: React.FC = () => {
       institution: 'Kalasalingam Academy of Research and Education',
       duration: '2023 - 2027',
       details: [
-        'Major: Computer Science, AIML',
+        'Major: Computer Science with AI/ML Specialization',
         'Relevant Coursework: Python, Data Structures & Algorithms, Machine Learning, Database Systems, IOT '
       ],
     },
