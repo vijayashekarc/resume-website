@@ -69,7 +69,7 @@ const Profile: React.FC = () => {
             maxWidth: '600px',
           }}
         >
-           Flutter Developer |    Competitive Programmer | Tech Enthusiast |   Music Composer & Producer
+           AI | Flutter Developer |    Competitive Programmer | Tech Enthusiast |   Music Composer & Producer
         </Typography>
       </Box>
     </Container>
