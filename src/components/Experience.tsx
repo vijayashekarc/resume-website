@@ -132,10 +132,11 @@ const Experience: React.FC = () => {
                       label={tech} 
                       size="small" 
                       sx={{ 
-                        bgcolor: 'rgba(26, 115, 232, 0.1)', 
-                        color: 'primary.main',
+                        bgcolor: '#F0F0F0', 
+                        color: 'text.primary',
                         fontWeight: 500,
                         transition: 'transform 0.2s',
+                        borderRadius: '4px',
                         '&:hover': { transform: 'scale(1.05)' }
                       }} 
                     />
@@ -171,10 +172,10 @@ const Experience: React.FC = () => {
 
             {/* What I Learned */}
             {exp.whatILearned && (
-              <Box sx={{ bgcolor: 'rgba(156, 39, 176, 0.05)', p: 2.5, borderRadius: 2, borderLeft: '4px solid #9c27b0' }}>
+              <Box sx={{ bgcolor: '#F9F9F9', p: 2.5, borderRadius: '4px', borderLeft: '4px solid #D4C5B9' }}>
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
                   <LightbulbIcon color="secondary" fontSize="small" />
-                  <Typography variant="subtitle1" color="secondary.main" sx={{ fontWeight: 600 }}>What I Learned</Typography>
+                  <Typography variant="subtitle1" color="text.primary" sx={{ fontWeight: 600 }}>What I Learned</Typography>
                 </Box>
                 <Typography variant="body2" sx={{ lineHeight: 1.6 }}>
                   {exp.whatILearned}

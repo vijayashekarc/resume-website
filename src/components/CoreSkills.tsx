@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Paper } from '@mui/material';
+import { Box, Typography, Paper, Chip, Avatar } from '@mui/material';
 import { keyframes } from '@mui/system';
 
 const fadeIn = keyframes`
@@ -14,14 +14,75 @@ const fadeIn = keyframes`
 `;
 
 const CoreSkills: React.FC = () => {
+  // Mapping skills to their SimpleIcons identifier
+  // We leave out the hex code so it uses the original brand colors!
+  const getIconUrl = (iconName: string) => {
+    if (!iconName) return '';
+    if (iconName.startsWith('http')) return iconName;
+    return `https://cdn.simpleicons.org/${iconName}`;
+  };
+
   const skills = [
-    { category: 'Programming Languages', items: ['Python (Proficient)','Java', 'JavaScript', 'C - Language'] },
-    { category: 'AI Tools', items: ['Claude Code','Gemini API','Tensor Flow','Jupyter Notebook'] },
-    { category: 'Frontend & Backend', items: ['Django','SpringBoot','Flask','React', 'Material-UI','Node.js', 'Express.js','HTML5', 'CSS',] },
-    { category: 'Database', items: ['Postgress','SQL' ,'MongoDB'] },
-    { category: 'Tools & Technologies', items: ['Version Control (Bitbucket / Github)','Ubuntu / Linux', 'AWS Cloud Services', 'Google AI Studio'] },
-    { category: 'Experienced IDE', items: ["Antigravity",'Codex','Visual Studio Code','IntelliJ IDEA','Android Studio'] },
-    
+    { 
+      category: 'Programming Languages', 
+      items: [
+        { name: 'Python (Proficient)', icon: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg' },
+        { name: 'Java', icon: 'https://icon.icepanel.io/Technology/svg/Java.svg' }, // Falls back to 'J' if not available
+        { name: 'JavaScript', icon: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png' },
+        { name: 'C - Language', icon: 'c' }
+      ] 
+    },
+    { 
+      category: 'AI Tools', 
+      items: [
+        { name: 'Claude Code', icon: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/Claude_AI_symbol.svg' },
+        { name: 'Gemini API', icon: 'googlegemini' },
+        { name: 'Tensor Flow', icon: 'tensorflow' },
+        { name: 'Jupyter Notebook', icon: 'jupyter' }
+      ] 
+    },
+    { 
+      category: 'Frontend & Backend', 
+      items: [
+        { name: 'Django', icon: 'django' },
+        { name: 'SpringBoot', icon: 'https://upload.wikimedia.org/wikipedia/commons/7/79/Spring_Boot.svg' },
+        { name: 'Flask', icon: 'flask' },
+        { name: 'React', icon: 'react' },
+        { name: 'Material-UI', icon: 'mui' },
+        { name: 'Node.js', icon: 'nodedotjs' },
+        { name: 'Express.js', icon: 'express' },
+        { name: 'HTML5', icon: 'html5' },
+        { name: 'CSS', icon: 'https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg' }
+      ] 
+    },
+    { 
+      category: 'Database', 
+      items: [
+        { name: 'Postgres', icon: 'postgresql' },
+        { name: 'SQL', icon: 'mysql' },
+        { name: 'MongoDB', icon: 'mongodb' }
+      ] 
+    },
+    { 
+      category: 'Tools & Technologies', 
+      items: [
+        { name: 'Bitbucket', icon: 'bitbucket' },
+        { name: 'Github', icon: 'https://www.svgrepo.com/show/303548/git-icon-logo.svg' },
+        { name: 'Ubuntu / Linux', icon: 'ubuntu' },
+        { name: 'AWS Cloud Services', icon: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg' },
+        { name: 'Google AI Studio', icon: 'google' }
+      ] 
+    },
+    { 
+      category: 'Experienced IDE', 
+      items: [
+        { name: 'Antigravity', icon: 'https://avatars.githubusercontent.com/u/242056456?s=200&v=4' },
+        { name: 'Codex', icon: 'https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg' },
+        { name: 'Visual Studio Code', icon: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg' },
+        { name: 'IntelliJ IDEA', icon: 'intellijidea' },
+        { name: 'Android Studio', icon: 'androidstudio' }
+      ] 
+    },
   ];
 
   return (
@@ -31,6 +92,8 @@ const CoreSkills: React.FC = () => {
         gutterBottom
         sx={{
           animation: `${fadeIn} 1s ease-out`,
+          mb: 4,
+          fontWeight: 'bold',
         }}
       >
         Core Skills
@@ -39,7 +102,7 @@ const CoreSkills: React.FC = () => {
         sx={{
           display: 'flex',
           flexWrap: 'wrap',
-          gap: 3,
+          gap: 4,
           '& > *': {
             flex: '1 1 300px',
             minWidth: '300px',
@@ -53,32 +116,46 @@ const CoreSkills: React.FC = () => {
             key={index}
             elevation={0}
             sx={{
-              p: 2,
-              animationDelay: `${index * 0.2}s`,
+              p: 4,
+              animationDelay: `${index * 0.15}s`,
             }}
           >
-            <Typography variant="h6" gutterBottom>
+            <Typography variant="h6" sx={{ mb: 3, fontWeight: 'bold' }}>
               {skillGroup.category}
             </Typography>
-            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1.5 }}>
               {skillGroup.items.map((skill, skillIndex) => (
-                <Typography
+                <Chip
                   key={skillIndex}
-                  variant="body2"
+                  label={skill.name}
+                  variant="outlined"
+                  avatar={
+                    <Avatar 
+                      src={getIconUrl(skill.icon)} 
+                      alt={skill.name}
+                      sx={{ 
+                        bgcolor: 'transparent', 
+                        '& img': { objectFit: 'contain' } 
+                      }}
+                    >
+                      {skill.name[0]}
+                    </Avatar>
+                  }
                   sx={{
-                    bgcolor: 'primary.main',
-                    color: 'white',
-                    px: 1,
-                    py: 0.5,
-                    borderRadius: 5,
-                    transition: 'transform 0.2s ease-in-out',
+                    borderColor: '#E5E5E5',
+                    bgcolor: '#FFFFFF',
+                    color: 'text.primary',
+                    fontWeight: 500,
+                    transition: 'border-color 0.2s',
                     '&:hover': {
-                      transform: 'scale(1.05)',
+                      borderColor: '#CCCCCC',
+                      bgcolor: '#F9F9F9',
                     },
+                    '& .MuiChip-avatar': {
+                      bgcolor: 'transparent',
+                    }
                   }}
-                >
-                  {skill}
-                </Typography>
+                />
               ))}
             </Box>
           </Paper>

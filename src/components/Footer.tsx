@@ -7,9 +7,8 @@ import EmailIcon from '@mui/icons-material/Email';
 
 const Footer: React.FC = () => {
   const iconStyle = {
-    transition: 'transform 0.2s ease-in-out, color 0.2s ease-in-out',
+    transition: 'color 0.2s ease-in-out',
     '&:hover': {
-      transform: 'scale(1.2)',
       backgroundColor: 'transparent',
       color: 'primary.main',
     },
@@ -21,10 +20,8 @@ const Footer: React.FC = () => {
       sx={{ 
         py: 4, 
         mt: 'auto', 
-        borderTop: '1px solid rgba(255, 255, 255, 0.4)',
-        backgroundColor: 'rgba(255, 255, 255, 0.4)',
-        backdropFilter: 'blur(12px)',
-        WebkitBackdropFilter: 'blur(12px)',
+        borderTop: '1px solid #E5E5E5',
+        backgroundColor: '#FAF9F6',
       }}
     >
       <Container maxWidth="lg" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>

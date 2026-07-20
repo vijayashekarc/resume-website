@@ -17,10 +17,8 @@ const Header: React.FC = () => {
       sx={{ 
         width: '100%',
         top: 0,
-        borderBottom: '1px solid rgba(255,255,255,0.3)',
-        backgroundColor: 'rgba(255, 255, 255, 0.6)',
-        backdropFilter: 'blur(12px)',
-        WebkitBackdropFilter: 'blur(12px)',
+        borderBottom: '1px solid #E5E5E5',
+        backgroundColor: '#FAF9F6',
         zIndex: 1100,
       }}
     >
