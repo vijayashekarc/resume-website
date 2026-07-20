@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { Box, Typography, Avatar, Container } from '@mui/material';
+import { Box, Typography, Avatar, Container, Button } from '@mui/material';
 import { keyframes } from '@mui/system';
 import PersonIcon from '@mui/icons-material/Person';
+import DownloadIcon from '@mui/icons-material/Download';
+import SendIcon from '@mui/icons-material/Send';
 
 const fadeIn = keyframes`
   from {
@@ -71,6 +73,51 @@ const Profile: React.FC = () => {
         >
           Backend Developer - Django |   Python |  AI | Tech Enthusiast |    Competitive Programmer 
         </Typography>
+        
+        <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', justifyContent: 'center' }}>
+          <Button
+            variant="contained"
+            href={process.env.PUBLIC_URL + "/resume/resume.pdf"}
+            download="Vijayashekar_C_Resume.pdf"
+            startIcon={<DownloadIcon />}
+            sx={{
+              textTransform: 'none',
+              fontWeight: 600,
+              borderRadius: '8px',
+              width: '200px',
+              py: 1.5,
+              boxShadow: 'none',
+              '&:hover': {
+                boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+              }
+            }}
+          >
+            Download Resume
+          </Button>
+
+          <Button
+            variant="outlined"
+            href="#contact"
+            startIcon={<SendIcon />}
+            sx={{
+              textTransform: 'none',
+              fontWeight: 600,
+              borderRadius: '8px',
+              width: '200px',
+              py: 1.5,
+              borderWidth: '2px',
+              borderColor: 'primary.main',
+              color: 'primary.main',
+              '&:hover': {
+                borderWidth: '2px',
+                borderColor: 'primary.main',
+                bgcolor: 'action.hover',
+              }
+            }}
+          >
+            Contact me
+          </Button>
+        </Box>
       </Box>
     </Container>
   );

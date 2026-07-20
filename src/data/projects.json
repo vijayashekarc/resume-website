@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Hackathon Problem Selection Platform",
+    "description": "Developed a Full-Stack MERN application to manage a hackathon-problem selection. The React frontend features a team dashboard with a timed countdown. The Node.js/Express.js backend uses PM2 to handle concurrent requests with round-robin load balancing. The app, deployed on Render and Vercel, uses MongoDB Atlas and JWT for secure authentication",
+    "technologies": ["React.js", "Node.js", "MongoDB", "Express.js", "Render.com", "Vercel"],
+    "githubLink": "https://github.com/vijayashekarc/ExpenseEase",
+    "demoLink": "https://hack-heist-team-login.vercel.app",
+    "imageUrl": "https://placehold.co/600x400/E5E5E5/666666?text=Hackathon+Platform"
+  },
+  {
+    "title": "Expense Tracker",
+    "description": "A basic expense tracker for your daily spendings. A web application for managing personal expenses for multiple users. Google Account users can login directly or also with custom email IDs too. User-data is being managed using Supabase integration.",
+    "technologies": ["HTML5", "CSS", "JavaScript", "React.js", "Node.js", "Google Cloud Platform - 0Auth", "Supabase - PostgreSQL"],
+    "githubLink": "https://github.com/vijayashekarc/ExpenseEase",
+    "demoLink": "https://github.com/vijayashekarc/ExpenseEase",
+    "imageUrl": "https://placehold.co/600x400/E5E5E5/666666?text=Expense+Tracker"
+  },
+  {
+    "title": "College Student Login Portal",
+    "description": "A College Login Portal for seamless on campus event registration. (A Problem statement given in INNOVATE KARE - 24Hr Hackathon organized by Coding Blocks KARE & ScoreCraft)",
+    "technologies": ["HTML5", "CSS", "JavaScript", "Node.js", "Google Cloud Platform - 0Auth", "Supabase - PostgreSQL"],
+    "githubLink": "https://github.com/vijayashekarc/",
+    "demoLink": "https://github.com/vijayashekarc/",
+    "imageUrl": "https://placehold.co/600x400/E5E5E5/666666?text=Login+Portal"
+  },
+  {
+    "title": "Grocery-Store-Interface-Project",
+    "description": "Project based on an online grocery store interface with features : Sign Up - Sign In - Multiple Payment Options - Delete Account - Reset Password - Generating Bill - Both in Text and PDF format (Using File operation) - Managing User Data and their ordered item history using CSV File and MySQL - Sending auto-generated bill through e-mail using SMTP library in python and Gmail API.",
+    "technologies": ["Python", "MySQL", "GCP"],
+    "githubLink": "https://github.com/vijayashekarc/Grocery-Store-Interface-Project",
+    "demoLink": "https://github.com/vijayashekarc/Grocery-Store-Interface-Project",
+    "imageUrl": "https://placehold.co/600x400/E5E5E5/666666?text=Grocery+Store"
+  },
+  {
+    "title": "An Android AI Calculator App",
+    "description": "An AI calculator powered by Gemini 2.5 Model",
+    "technologies": ["Flutter", "Gemini API", "FireBase Studio"],
+    "githubLink": "https://github.com/vijayashekarc",
+    "demoLink": "https://github.com/vijayashekarc",
+    "imageUrl": "https://placehold.co/600x400/E5E5E5/666666?text=AI+Calculator"
+  }
+]

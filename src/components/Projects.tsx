@@ -1,7 +1,11 @@
 import React from 'react';
-import { Box, Typography, Paper, Chip, Link } from '@mui/material';
+import { Box, Typography, Paper, Chip, Button, IconButton, useTheme } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { Link as RouterLink } from 'react-router-dom';
 import { keyframes } from '@mui/system';
+import projectsData from '../data/projects.json';
 
 const fadeIn = keyframes`
   from {
@@ -15,133 +19,194 @@ const fadeIn = keyframes`
 `;
 
 const Projects: React.FC = () => {
-  const projects = [
-    {
-      title: 'Hackathon Problem Selection Platform',
-      description: "Developed a Full-Stack MERN application to manage a hackathon-problem selection. The React frontend features a team dashboard with a timed countdown. The Node.js/Express.js backend uses PM2 to handle concurrent requests with round-robin load balancing. The app, deployed on Render and Vercel, uses MongoDB Atlas and JWT for secure authentication",
-      technologies: ['React.js', 'Node.js', 'MongoDB','React.js','Express.js','Render.com','vercel'],
-      githubLink: 'https://github.com/vijayashekarc/ExpenseEase',
-      demoLink: 'https://hack-heist-team-login.vercel.app',
-    },
-    {
-      title: 'Expense Tracker ',
-      description: 'A basic expense tracker for your daily spendings. A web application for managing personal expenses for multiple users. Google Account users can login directly or also with custom email IDs too. User-data is being managed using Supabase integration.',
-      technologies: ['HTML5', 'CSS', 'JavaScript','React.js','Node.js',"Google Cloud Platform - 0Auth ",'Supabase - PostgreSQL'],
-      githubLink: 'https://github.com/vijayashekarc/ExpenseEase',
-      demoLink: 'https://github.com/vijayashekarc/ExpenseEase',
-    },
-    {
-      title: 'College Student Login Portal ',
-      description: ' A College Login Portal for seamless on campus event registration.  (A Problem statement given in INNOVATE KARE - 24Hr Hackathon organized by Coding Blocks KARE & ScoreCraft) ',
-      technologies: ['HTML5', 'CSS', 'JavaScript','Node.js',"Google Cloud Platform - 0Auth ",'Supabase - PostgreSQL'],
-      githubLink: 'https://github.com/vijayashekarc/',
-      demoLink: 'https://github.com/vijayashekarc/',
-    },
-    {
-      title: 'Grocery-Store-Interface-Project',
-      description: 'Project based on an online grocery store interface \n with features : Sign Up - Sign In - Multiple Payment Options - Delete Account - Reset Password - Generating Bill - \n Both in Text and PDF format (Using File operation) - Managing User Data and their ordered item history using \n CSV File and MySQL - Sending auto-generated bill through e-mail using SMTP library in python and Gmail API.',
-      technologies: ['Python', 'MySQL', 'GCP'],
-      githubLink: 'https://github.com/vijayashekarc/Grocery-Store-Interface-Project',
-      demoLink: 'https://github.com/vijayashekarc/Grocery-Store-Interface-Project',
-    },
-
-    {
-      title: 'An Android AI Calculator App',
-      description: 'An AI calculator powered by Gemini 2.5 Model',
-      technologies: ['Flutter','Gemini API','FireBase Studio'],
-      githubLink: 'https://github.com/vijayashekarc',
-      demoLink: 'https://github.com/vijayashekarc',
-    }
-  ];
+  const theme = useTheme();
+  
   return (
     <Box sx={{ p: 3 }}>
-      <Typography 
-        variant="h4" 
-        gutterBottom
-        sx={{
-          animation: `${fadeIn} 1s ease-out`,
-        }}
-      >
-        Projects
-      </Typography>
+      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 4 }}>
+        <Typography 
+          variant="h4" 
+          sx={{
+            animation: `${fadeIn} 1s ease-out`,
+            fontWeight: 'bold',
+            color: 'text.primary'
+          }}
+        >
+          Projects
+        </Typography>
+        <Button 
+          component={RouterLink} 
+          to="/projects" 
+          endIcon={<ArrowForwardIcon />}
+          sx={{ 
+            color: 'text.primary',
+            fontWeight: 'bold',
+            '&:hover': { bgcolor: 'transparent', textDecoration: 'underline' }
+          }}
+        >
+          View All
+        </Button>
+      </Box>
+
       <Box
         sx={{
           display: 'flex',
-          flexWrap: 'wrap',
+          overflowX: 'auto',
           gap: 3,
-          '& > *': {
-            flex: '1 1 400px',
-            minWidth: '300px',
-            animation: `${fadeIn} 1s ease-out`,
-            animationFillMode: 'both',
+          pb: 2,
+          scrollSnapType: 'x mandatory',
+          animation: `${fadeIn} 1s ease-out`,
+          '&::-webkit-scrollbar': {
+            height: '8px',
+          },
+          '&::-webkit-scrollbar-track': {
+            backgroundColor: theme.palette.mode === 'light' ? '#F9F9F9' : 'rgba(255,255,255,0.05)',
+            borderRadius: '4px',
+          },
+          '&::-webkit-scrollbar-thumb': {
+            backgroundColor: theme.palette.mode === 'light' ? '#CCCCCC' : 'rgba(255,255,255,0.2)',
+            borderRadius: '4px',
+          },
+          '&::-webkit-scrollbar-thumb:hover': {
+            backgroundColor: theme.palette.mode === 'light' ? '#999999' : 'rgba(255,255,255,0.4)',
           },
         }}
       >
-        {projects.map((project, index) => (
+        {projectsData.map((project, index) => (
           <Paper
             key={index}
             elevation={0}
             sx={{
-              p: 3,
-              height: '100%',
-              animationDelay: `${index * 0.2}s`,
+              minWidth: { xs: '300px', md: '400px' },
+              maxWidth: { xs: '300px', md: '400px' },
+              scrollSnapAlign: 'start',
+              border: '1px solid',
+              borderColor: 'divider',
+              borderRadius: '8px',
+              overflow: 'hidden',
+              display: 'flex',
+              flexDirection: 'column',
+              bgcolor: 'background.paper',
+              transition: 'all 0.3s ease-in-out',
+              '&:hover': {
+                transform: 'translateY(-5px)',
+                borderColor: theme.palette.mode === 'light' ? '#CCCCCC' : 'rgba(255,255,255,0.24)',
+                boxShadow: theme.palette.mode === 'light' ? '0 10px 30px rgba(0,0,0,0.05)' : '0 10px 30px rgba(0,0,0,0.5)',
+                '& .project-image': {
+                  transform: 'scale(1.05)'
+                },
+                '& .project-overlay': {
+                  opacity: 1
+                }
+              }
             }}
           >
-            <Typography variant="h5" gutterBottom>
-              {project.title}
-            </Typography>
-            <Typography variant="body1" paragraph>
-              {project.description}
-            </Typography>
-            <Box sx={{ mb: 2 }}>
-              {project.technologies.map((tech, idx) => (
-                <Chip
-                  key={idx}
-                  label={tech}
-                  size="small"
-                  sx={{
-                    mr: 1,
-                    mb: 1,
-                    transition: 'transform 0.2s ease-in-out',
-                    '&:hover': {
-                      transform: 'scale(1.1)',
-                    },
-                  }}
-                />
-              ))}
-            </Box>
-            <Box sx={{ display: 'flex', gap: 2 }}>
-              <Link
-                href={project.githubLink}
-                target="_blank"
-                rel="noopener noreferrer"
+            {/* Image Gallery Header */}
+            <Box sx={{ position: 'relative', width: '100%', height: '220px', overflow: 'hidden' }}>
+              <Box
+                className="project-image"
                 sx={{
+                  width: '100%',
+                  height: '100%',
+                  backgroundImage: `url(${project.imageUrl})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  transition: 'transform 0.4s ease-in-out',
+                  bgcolor: 'action.hover' // Fallback color
+                }}
+              />
+              <Box 
+                className="project-overlay"
+                sx={{
+                  position: 'absolute',
+                  top: 0, left: 0, right: 0, bottom: 0,
+                  bgcolor: theme.palette.mode === 'light' ? 'rgba(255, 255, 255, 0.85)' : 'rgba(0, 0, 0, 0.7)',
+                  backdropFilter: 'blur(4px)',
                   display: 'flex',
                   alignItems: 'center',
-                  transition: 'transform 0.2s ease-in-out',
-                  '&:hover': {
-                    transform: 'translateX(5px)',
-                  },
+                  justifyContent: 'center',
+                  opacity: 0,
+                  transition: 'opacity 0.3s ease-in-out',
+                  gap: 2
                 }}
               >
-                <GitHubIcon sx={{ mr: 0.5 }} />
-                GitHub
-              </Link>
-              {project.demoLink && (
-                <Link
-                  href={project.demoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  sx={{
-                    transition: 'transform 0.2s ease-in-out',
-                    '&:hover': {
-                      transform: 'translateX(5px)',
-                    },
-                  }}
-                >
-                  Live Demo
-                </Link>
-              )}
+                {project.githubLink && (
+                  <IconButton 
+                    href={project.githubLink} 
+                    target="_blank" 
+                    sx={{ 
+                      bgcolor: theme.palette.mode === 'light' ? '#1A1A1A' : 'rgba(255,255,255,0.1)', 
+                      color: theme.palette.mode === 'light' ? 'white' : 'text.primary', 
+                      '&:hover': { bgcolor: theme.palette.mode === 'light' ? '#333333' : 'rgba(255,255,255,0.2)' } 
+                    }}
+                  >
+                    <GitHubIcon />
+                  </IconButton>
+                )}
+                {project.demoLink && (
+                  <IconButton 
+                    href={project.demoLink} 
+                    target="_blank" 
+                    sx={{ 
+                      bgcolor: theme.palette.mode === 'light' ? '#1A1A1A' : 'rgba(255,255,255,0.1)', 
+                      color: theme.palette.mode === 'light' ? 'white' : 'text.primary', 
+                      '&:hover': { bgcolor: theme.palette.mode === 'light' ? '#333333' : 'rgba(255,255,255,0.2)' } 
+                    }}
+                  >
+                    <OpenInNewIcon />
+                  </IconButton>
+                )}
+              </Box>
+            </Box>
+
+            {/* Content Section */}
+            <Box sx={{ p: 3, flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
+              <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 1, lineHeight: 1.3, color: 'text.primary' }}>
+                {project.title}
+              </Typography>
+              <Typography 
+                variant="body2" 
+                color="text.secondary" 
+                paragraph 
+                sx={{ 
+                  mb: 2, 
+                  flexGrow: 1,
+                  display: '-webkit-box',
+                  WebkitLineClamp: 3,
+                  WebkitBoxOrient: 'vertical',
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis'
+                }}
+              >
+                {project.description}
+              </Typography>
+              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+                {project.technologies.slice(0, 4).map((tech, idx) => (
+                  <Chip
+                    key={idx}
+                    label={tech}
+                    size="small"
+                    sx={{
+                      bgcolor: 'action.hover',
+                      color: 'text.secondary',
+                      fontWeight: 500,
+                      borderRadius: '4px',
+                      '&:hover': { bgcolor: 'action.selected' }
+                    }}
+                  />
+                ))}
+                {project.technologies.length > 4 && (
+                  <Chip
+                    label={`+${project.technologies.length - 4}`}
+                    size="small"
+                    sx={{
+                      bgcolor: 'transparent',
+                      color: 'text.secondary',
+                      fontWeight: 'bold',
+                    }}
+                  />
+                )}
+              </Box>
             </Box>
           </Paper>
         ))}

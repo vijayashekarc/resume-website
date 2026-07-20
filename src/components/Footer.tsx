@@ -20,8 +20,9 @@ const Footer: React.FC = () => {
       sx={{ 
         py: 4, 
         mt: 'auto', 
-        borderTop: '1px solid #E5E5E5',
-        backgroundColor: '#FAF9F6',
+        borderTop: '1px solid',
+        borderColor: 'divider',
+        backgroundColor: 'background.paper',
       }}
     >
       <Container maxWidth="lg" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>

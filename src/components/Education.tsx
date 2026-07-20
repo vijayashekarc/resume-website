@@ -10,15 +10,16 @@ const Education: React.FC = () => {
       duration: '2023 - 2027',
       details: [
         'Major: Computer Science with AI/ML Specialization',
-        'Relevant Coursework: Python, Data Structures & Algorithms, Machine Learning, Database Systems, IOT '
+        'Relevant Coursework: Python, Java, C, Data Structures & Algorithms, Operating Systems, DBMS, Machine Learning/Deep Learning, Natural Language Processing, IOT '
       ],
     },
     {
       degree: 'High School',
-      institution: 'Kendriya Vidyalaya - Uppal No.1',
+      institution: 'Kendriya Vidyalaya - Uppal No.1, Hyderabad',
       duration: '2021 - 2023',
       details: [
         'CBSE (Central Board of Secondary Education)',
+        'Relevant Coursework: Computer Science, Physics, Chemistry, Mathematics'
       ],
     },
   ];

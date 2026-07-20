@@ -1,0 +1,76 @@
+[
+  {
+    "title": "Software Developer Intern",
+    "company": "Ayantrik Tech Private Limited",
+    "companyUrl": "https://ayantrik.in/",
+    "linkedin": "https://www.linkedin.com/company/ayantrik-tech-private-limited/",
+    "duration": "Dec 2025 - Present",
+    "logo": "/ayantrik.svg",
+    "techStack": [
+      "Python",
+      "Django",
+      "REST APIs",
+      "PostgreSQL",
+      "AWS Cloud Services (S3)",
+      "React",
+      "Docker",
+      "Git"
+    ],
+    "whatIDid": [
+      "Developing RESTful APIs using Django, PostgreSQL, and Postman for API development and testing - Containerizing applications using Docker and deploying on AWS - Configuring Bitbucket Pipelines for automated build and deployment - Optimizing database queries and maintaining production backend services - Leveraged AI-assisted development tools including Cursor and Antigravity to accelerate implementation, debugging, code reviews, and documentation while maintaining production-quality code.",
+      "Worked on developing Teacher and Student workspace for enterprise solutions.",
+      "Subscription Invoice PDF generation from the backend using ReportLab.",
+      "Implemented frontend designs using Figma MCP Tool.",
+      "Fixed component SVGs and updated them using Inkscape and React.",
+      "Technical documentation"
+    ],
+    "whatILearned": "Hands-on experience in Django Backend, RESTful API design. Gained insights into enterprise-level software solutions and improved problem-solving skills in a collaborative environment. Manage Version Control using bitbucket. System design and architecture of the backend services. Atlasian Jira for project management and task tracking."
+  },
+
+  {
+    "title": "Technical Head",
+    "company": "GFG Body Campus  KARE",
+    "companyUrl": "https://gfgkare.github.io/",
+    "linkedin": "https://www.linkedin.com/company/gfg-kare-student-chapter/",
+    "duration": "Aug 2025 - July 2026",
+    "logo": "https://media.geeksforgeeks.org/gfg-gg-logo.svg",
+    "techStack": [
+      "Python",
+      "Django",
+      "REST APIs",
+      "PostgreSQL",
+      "AWS Cloud Services (S3)",
+      "React",
+      "Docker",
+      "Git"
+    ],
+    "whatIDid": [
+      "Developed a web application for managing teacher and student workspaces.",
+      "Implemented RESTful APIs for seamless communication between frontend and backend.",
+      "Integrated PostgreSQL database for efficient data storage and retrieval.",
+      "Utilized AWS S3 for secure file storage and management.",
+      "Collaborated with the frontend team to ensure smooth integration of React components."
+    ],
+    "whatILearned": "Gained practical experience in full-stack development, enhancing my skills in Django, RESTful API design, and database management. Learned to work effectively in a team environment, improving my communication and collaboration skills."
+  },
+  {
+    "title": "Competitive Programming Lead",
+    "company": "Microsoft Learn Student Chapter KARE",
+    "companyUrl": "https://www.linkedin.com/company/mlsckare/",
+    "linkedin": "https://www.linkedin.com/company/mlsckare/",
+    "duration": "Jul 2024 - June 2025",
+    "logo": "https://mvp.microsoft.com/Assets/UserProfile/MSA/Badge/LevelNew.png",
+    "techStack": [
+      "C++",
+      "Python",
+      "Data Structures",
+      "Algorithms"
+    ],
+    "whatIDid": [
+      "Contributed new problem statements for the hackathons.",
+      "Organized hackathons and workshops effectively.",
+      "Designed posters and flyers for multiple events."
+    ],
+    "whatILearned": "Enhanced leadership and event management skills while deepening my understanding of advanced algorithms and competitive programming strategies."
+  }
+]
