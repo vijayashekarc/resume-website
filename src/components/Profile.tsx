@@ -31,7 +31,7 @@ const Profile: React.FC = () => {
         }}
       >
         <Avatar
-          src={process.env.PUBLIC_URL + "/profile.jpg"}
+          src={process.env.PUBLIC_URL + "/Profile.jpg"}
           onError={() => setImgError(true)}
           sx={{
             width: 240,
