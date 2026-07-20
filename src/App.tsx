@@ -84,7 +84,7 @@ const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Router basename="/resume-website">
+      <Router basename="/AboutMe">
         <div style={{ 
           minHeight: '100vh',
           display: 'flex',
