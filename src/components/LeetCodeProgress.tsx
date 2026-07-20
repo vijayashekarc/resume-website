@@ -14,7 +14,6 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
   margin: theme.spacing(2),
   backgroundColor: theme.palette.background.paper,
   borderRadius: '12px',
-  boxShadow: '0 4px 6px rgba(255, 0, 0, 0.71)',
 }));
 
 const LeetCodeProgress: React.FC = () => {
@@ -63,7 +62,7 @@ const LeetCodeProgress: React.FC = () => {
   }
 
   return (
-    <StyledPaper elevation={3}>
+    <StyledPaper elevation={0}>
       <Typography variant="h5" gutterBottom sx={{ fontWeight: 'bold', color: 'primary.main' }}>
         LeetCode Progress  
         <IconButton

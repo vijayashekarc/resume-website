@@ -37,7 +37,7 @@ const Profile: React.FC = () => {
             mb: 4,
             border: '4px solid',
             borderColor: 'primary.main',
-            boxShadow: '0 4px 20px rgba(55, 34, 216, 0.48)',
+            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.1)',
             transition: 'transform 0.3s ease-in-out',
             '&:hover': {
               transform: 'scale(1.05)',
@@ -53,7 +53,7 @@ const Profile: React.FC = () => {
           sx={{
             fontWeight: 'bold',
             mb: 2,
-            background: 'linear-gradient(45deg,rgb(161, 154, 248) 10%,rgb(236, 219, 255) 90%)',
+            background: 'linear-gradient(45deg, #1a73e8 10%, #9c27b0 90%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
           }}
@@ -69,7 +69,7 @@ const Profile: React.FC = () => {
             maxWidth: '600px',
           }}
         >
-           AI | Flutter Developer |    Competitive Programmer | Tech Enthusiast |   Music Composer & Producer
+          Backend Developer - Django |   Python |  AI | Tech Enthusiast |    Competitive Programmer 
         </Typography>
       </Box>
     </Container>

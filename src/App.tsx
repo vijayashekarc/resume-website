@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 import Header from './components/Header';
 import Profile from './components/Profile';
@@ -8,59 +8,71 @@ import Experience from './components/Experience';
 import Education from './components/Education';
 import Projects from './components/Projects';
 import LeetCodeProgress from './components/LeetCodeProgress';
+import Footer from './components/Footer';
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#1976d2',
+      main: '#1a73e8', // Google Blue
     },
     secondary: {
-      main: '#7ed98b',
+      main: '#9c27b0', // Soft purple
     },
     background: {
-      default: '#132547',
-      paper: '#822b72',
+      default: '#f8f9fa',
+      paper: 'rgba(255, 255, 255, 0.7)',
     },
     text: {
-      primary: '#ffffff',    // White text for main content
-      secondary: '#c6c3d6',  // Light gray for secondary text
+      primary: '#202124',    // Dark gray for high readability
+      secondary: '#5f6368',  // Lighter gray for secondary text
     },
   },
   typography: {
-    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontFamily: '"Inter", "Roboto", "Helvetica Neue", "Arial", sans-serif',
     h1: {
-      color: '#ffffff',
+      color: '#202124',
+      fontWeight: 600,
     },
     h2: {
-      color: '#ffffff',
+      color: '#202124',
+      fontWeight: 600,
     },
     h3: {
-      color: '#ffffff',
+      color: '#202124',
+      fontWeight: 500,
     },
     h4: {
-      color: '#00ff26',
+      color: '#202124',
+      fontWeight: 500,
     },
     h5: {
-      color: '#a89bf2',
+      color: '#1a73e8',
+      fontWeight: 500,
     },
     h6: {
-      color: '#ffffff',
+      color: '#202124',
+      fontWeight: 500,
     },
     body1: {
-      color: '#ffffff',
+      color: '#202124',
     },
     body2: {
-      color: '#000000',
+      color: '#5f6368',
     },
   },
   components: {
     MuiPaper: {
       styleOverrides: {
         root: {
+          backgroundColor: 'rgba(255, 255, 255, 0.65)',
+          backdropFilter: 'blur(16px)',
+          WebkitBackdropFilter: 'blur(16px)',
           transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
+          boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+          border: '1px solid rgba(255, 255, 255, 0.8)',
           '&:hover': {
-            transform: 'translateY(-5px)',
-            boxShadow: '0 8px 24px rgba(0,0,0,0.1)',
+            transform: 'translateY(-2px)',
+            boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
           },
         },
       },
@@ -75,7 +87,11 @@ const App: React.FC = () => {
       <Router basename="/resume-website">
         <div style={{ 
           minHeight: '100vh',
-          background: 'linear-gradient(135deg,rgb(43, 28, 79) 20%,rgb(255, 255, 255) 100%)' // Gradient background
+          display: 'flex',
+          flexDirection: 'column',
+          paddingTop: '64px', // Space for the fixed header
+          // Brighter Gemini-like subtle 4-color gradient (Blue, Red, Yellow, Green)
+          background: 'linear-gradient(135deg, rgba(66,133,244,0.12) 0%, rgba(234,67,53,0.1) 33%, rgba(251,188,5,0.12) 66%, rgba(52,168,83,0.1) 100%)',
         }}>
           <Header />
           <Profile />
@@ -84,6 +100,7 @@ const App: React.FC = () => {
           <Experience />
           <LeetCodeProgress />
           <Projects />
+          <Footer />
         </div>
       </Router>
     </ThemeProvider>

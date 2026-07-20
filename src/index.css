@@ -28,4 +28,25 @@ ul {
   transition: transform 0.2s ease-in-out;
 }
 
+/* Glass Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
 
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(140, 140, 140, 0.3);
+  border-radius: 6px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(140, 140, 140, 0.5);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}

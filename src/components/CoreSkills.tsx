@@ -15,12 +15,12 @@ const fadeIn = keyframes`
 
 const CoreSkills: React.FC = () => {
   const skills = [
-    { category: 'Programming Languages', items: ['Python - Proficient','JAVA', 'JavaScript', 'C - Language','Dart (Flutter)'] },
-    { category: 'AI Tools', items: ['GitHub Copilot','Gemini API','Tensor Flow','Jupyter Notebook','Cursor AI'] },
-    { category: 'Frontend & Backend', items: ['React', 'HTML5', 'CSS', 'Material-UI','Node.js', 'Express.js','Flask'] },
-    { category: 'Database', items: ['SQL' , 'Supabase','MongoDB'] },
-    { category: 'Tools & Technologies', items: ['Git','Linux', 'Google AI Studio', 'Google Cloud Platform','Flutter',] },
-    { category: 'Experienced IDE', items: ['Visual Studio Code','IntelliJ IDEA','Android Studio',] },
+    { category: 'Programming Languages', items: ['Python (Proficient)','Java', 'JavaScript', 'C - Language'] },
+    { category: 'AI Tools', items: ['Claude Code','Gemini API','Tensor Flow','Jupyter Notebook'] },
+    { category: 'Frontend & Backend', items: ['Django','SpringBoot','Flask','React', 'Material-UI','Node.js', 'Express.js','HTML5', 'CSS',] },
+    { category: 'Database', items: ['Postgress','SQL' ,'MongoDB'] },
+    { category: 'Tools & Technologies', items: ['Version Control (Bitbucket / Github)','Ubuntu / Linux', 'AWS Cloud Services', 'Google AI Studio'] },
+    { category: 'Experienced IDE', items: ["Antigravity",'Codex','Visual Studio Code','IntelliJ IDEA','Android Studio'] },
     
   ];
 
@@ -51,14 +51,10 @@ const CoreSkills: React.FC = () => {
         {skills.map((skillGroup, index) => (
           <Paper
             key={index}
-            elevation={3}
+            elevation={0}
             sx={{
               p: 2,
               animationDelay: `${index * 0.2}s`,
-              '&:hover': {
-                transform: 'translateY(-5px)',
-                boxShadow: '0 8px 24px rgba(255, 255, 255, 0.54)',
-              },
             }}
           >
             <Typography variant="h6" gutterBottom>

@@ -16,7 +16,13 @@ const fadeIn = keyframes`
 
 const Projects: React.FC = () => {
   const projects = [
-    
+    {
+      title: 'Hackathon Problem Selection Platform',
+      description: "Developed a Full-Stack MERN application to manage a hackathon-problem selection. The React frontend features a team dashboard with a timed countdown. The Node.js/Express.js backend uses PM2 to handle concurrent requests with round-robin load balancing. The app, deployed on Render and Vercel, uses MongoDB Atlas and JWT for secure authentication",
+      technologies: ['React.js', 'Node.js', 'MongoDB','React.js','Express.js','Render.com','vercel'],
+      githubLink: 'https://github.com/vijayashekarc/ExpenseEase',
+      demoLink: 'https://hack-heist-team-login.vercel.app',
+    },
     {
       title: 'Expense Tracker ',
       description: 'A basic expense tracker for your daily spendings. A web application for managing personal expenses for multiple users. Google Account users can login directly or also with custom email IDs too. User-data is being managed using Supabase integration.',
@@ -38,9 +44,15 @@ const Projects: React.FC = () => {
       githubLink: 'https://github.com/vijayashekarc/Grocery-Store-Interface-Project',
       demoLink: 'https://github.com/vijayashekarc/Grocery-Store-Interface-Project',
     },
-    
-  ];
 
+    {
+      title: 'An Android AI Calculator App',
+      description: 'An AI calculator powered by Gemini 2.5 Model',
+      technologies: ['Flutter','Gemini API','FireBase Studio'],
+      githubLink: 'https://github.com/vijayashekarc',
+      demoLink: 'https://github.com/vijayashekarc',
+    }
+  ];
   return (
     <Box sx={{ p: 3 }}>
       <Typography 
@@ -68,15 +80,11 @@ const Projects: React.FC = () => {
         {projects.map((project, index) => (
           <Paper
             key={index}
-            elevation={3}
+            elevation={0}
             sx={{
               p: 3,
               height: '100%',
               animationDelay: `${index * 0.2}s`,
-              '&:hover': {
-                transform: 'translateY(-5px)',
-                boxShadow: '0 8px 24px rgba(0,0,0,0.1)',
-              },
             }}
           >
             <Typography variant="h5" gutterBottom>

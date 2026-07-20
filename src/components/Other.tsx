@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Typography, Paper } from '@mui/material';
 import SchoolIcon from '@mui/icons-material/School';
 
-const Education: React.FC = () => {
+const Other: React.FC = () => {
   const education = [
     {
       degree: 'Bachelor of Technology',
@@ -26,11 +26,11 @@ const Education: React.FC = () => {
   return (
     <Box sx={{ p: 3 }}>
       <Typography variant="h4" gutterBottom>
-        Education
+        Other
       </Typography>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
         {education.map((edu, index) => (
-          <Paper key={index} elevation={0} sx={{ p: 3 }}>
+          <Paper key={index} elevation={3} sx={{ p: 3 }}>
             <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
               <SchoolIcon sx={{ mr: 1 }} />
               <Box>
@@ -54,4 +54,4 @@ const Education: React.FC = () => {
   );
 };
 
-export default Education; 
+export default Other; 
