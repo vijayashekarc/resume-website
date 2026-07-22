@@ -27,7 +27,6 @@ const CurrentStack: React.FC = () => {
       category: 'Programming Language',
       items: [
         { name: 'Python', icon: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg' },
-        { name: 'Django Framework', icon: 'django' }
       ]
     },
     {
